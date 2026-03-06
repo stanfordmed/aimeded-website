@@ -7,14 +7,14 @@ const HeroSection = () => {
     <section className="relative overflow-hidden min-h-[600px] flex items-center">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
+        style={{ backgroundImage: `url(${heroBg})` }} />
+      
       <div className="absolute inset-0 bg-gradient-to-r from-stanford-dark/90 via-stanford-dark/70 to-transparent" />
 
       <div className="container relative z-10 py-24 md:py-32">
         <div className="max-w-2xl space-y-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-            Stanford University Initiative
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">STANFORD UNIVERSITY SCHOOL OF MEDICINE
+
           </p>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] font-serif">
@@ -45,15 +45,15 @@ const HeroSection = () => {
               asChild
               variant="outline"
               size="lg"
-              className="rounded-full px-8 text-base border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent"
-            >
+              className="rounded-full px-8 text-base border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent">
+              
               <Link to="/get-involved">Get Involved</Link>
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
