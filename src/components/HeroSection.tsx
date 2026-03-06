@@ -18,8 +18,8 @@ const HeroSection = () => {
             AI & Medical Education
           </h1>
 
-          <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.7s" }}>
-            <img src={fundamentalTheorem} alt="The Fundamental Theorem of Informatics: (Human + Computer) > Human" className="max-w-md w-full invert brightness-200" />
+          <div className="opacity-0 animate-slide-up -my-4" style={{ animationDelay: "0.7s" }}>
+            <img src={fundamentalTheorem} alt="The Fundamental Theorem of Informatics: (Human + Computer) > Human" className="max-w-md w-full" style={{ filter: "invert(1)" }} />
           </div>
 
           <p className="text-lg text-white/80 max-w-lg leading-relaxed opacity-0 animate-fade-up" style={{ animationDelay: "0.9s" }}>
