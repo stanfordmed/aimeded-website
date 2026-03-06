@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import fundamentalTheorem from "@/assets/fundamental-theorem.jpg";
 import AntigravityCanvas from "@/components/AntigravityCanvas";
 
 const HeroSection = () => {
@@ -17,12 +18,8 @@ const HeroSection = () => {
             AI & Medical Education
           </h1>
 
-          <div className="inline-block rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm px-6 py-4 opacity-0 animate-slide-up" style={{ animationDelay: "0.7s" }}>
-            <p className="text-2xl md:text-3xl font-serif font-bold text-white">
-              Human + Computer{" "}
-              <span className="text-accent">&gt;</span>{" "}
-              Human
-            </p>
+          <div className="inline-block rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm p-4 opacity-0 animate-slide-up" style={{ animationDelay: "0.7s" }}>
+            <img src={fundamentalTheorem} alt="The Fundamental Theorem of Informatics: Human + Computer > Human" className="max-w-sm w-full invert brightness-200" />
           </div>
 
           <p className="text-lg text-white/80 max-w-lg leading-relaxed opacity-0 animate-fade-up" style={{ animationDelay: "0.9s" }}>
