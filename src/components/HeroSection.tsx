@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import AntigravityCanvas from "@/components/AntigravityCanvas";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden min-h-[600px] flex items-center">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }} />
+    <section className="relative overflow-hidden min-h-[600px] flex items-center bg-stanford-dark">
+      <AntigravityCanvas />
       
-      <div className="absolute inset-0 bg-gradient-to-r from-stanford-dark/90 via-stanford-dark/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-stanford-dark/95 via-stanford-dark/80 to-stanford-dark/60" />
 
       <div className="container relative z-10 py-24 md:py-32">
         <div className="max-w-2xl space-y-8">
@@ -44,14 +42,13 @@ const HeroSection = () => {
               variant="outline"
               size="lg"
               className="rounded-full px-8 text-base border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent">
-              
               <Link to="/get-involved">Get Involved</Link>
             </Button>
           </div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default HeroSection;
