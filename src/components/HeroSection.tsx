@@ -13,15 +13,13 @@ const HeroSection = () => {
 
       <div className="container relative z-10 py-24 md:py-32">
         <div className="max-w-2xl space-y-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">STANFORD UNIVERSITY SCHOOL OF MEDICINE
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>STANFORD UNIVERSITY SCHOOL OF MEDICINE</p>
 
-          </p>
-
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] font-serif">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] font-serif opacity-0 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             AI & Medical Education
           </h1>
 
-          <div className="inline-block rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm px-6 py-4">
+          <div className="inline-block rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm px-6 py-4 opacity-0 animate-slide-up" style={{ animationDelay: "0.7s" }}>
             <p className="text-xs uppercase tracking-widest text-white/60 mb-1">
               The Fundamental Theorem of Informatics
             </p>
@@ -32,12 +30,12 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <p className="text-lg text-white/80 max-w-lg leading-relaxed">
+          <p className="text-lg text-white/80 max-w-lg leading-relaxed opacity-0 animate-fade-up" style={{ animationDelay: "0.9s" }}>
             Empowering the next generation of clinicians, educators, and researchers 
             to harness AI for better patient outcomes.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 opacity-0 animate-fade-up" style={{ animationDelay: "1.1s" }}>
             <Button asChild size="lg" className="rounded-full px-8 text-base">
               <Link to="/learn">Start Learning</Link>
             </Button>
