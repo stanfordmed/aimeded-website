@@ -12,6 +12,10 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      sans: ['Inter', 'system-ui', 'sans-serif'],
+      serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -46,6 +50,12 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        stanford: {
+          cardinal: "hsl(var(--stanford-cardinal))",
+          dark: "hsl(var(--stanford-dark))",
+          warm: "hsl(var(--stanford-warm))",
+          light: "hsl(var(--stanford-light))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
