@@ -18,9 +18,6 @@ const HeroSection = () => {
           </h1>
 
           <div className="inline-block rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm px-6 py-4 opacity-0 animate-slide-up" style={{ animationDelay: "0.7s" }}>
-            <p className="text-xs uppercase tracking-widest text-white/60 mb-1">
-              The Fundamental Theorem of Informatics
-            </p>
             <p className="text-2xl md:text-3xl font-serif font-bold text-white">
               Human + Computer{" "}
               <span className="text-accent">&gt;</span>{" "}
