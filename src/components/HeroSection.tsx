@@ -6,7 +6,7 @@ import fundamentalTheorem from "@/assets/fundamental-theorem.png";
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden min-h-[600px] flex items-center bg-stanford-dark">
-      <AntigravityCanvas />
+      
       
       <div className="absolute inset-0 bg-gradient-to-r from-stanford-dark/95 via-stanford-dark/80 to-stanford-dark/60" />
 
