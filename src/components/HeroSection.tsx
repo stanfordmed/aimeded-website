@@ -11,8 +11,8 @@ const HeroSection = () => {
         <div className="max-w-2xl space-y-8">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>STANFORD UNIVERSITY SCHOOL OF MEDICINE</p>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] font-serif opacity-0 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-            AI & Medical Education
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] font-serif opacity-0 animate-fade-up" style={{ animationDelay: "0.4s" }}>AI in Medical Education
+
           </h1>
 
           <div className="opacity-0 animate-slide-up flex items-center gap-2 text-white text-2xl md:text-3xl font-light" style={{ animationDelay: "0.7s" }}>
@@ -44,8 +44,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
