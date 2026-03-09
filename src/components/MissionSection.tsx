@@ -13,15 +13,15 @@ const MissionSection = () => {
           <h2 className={`text-3xl md:text-4xl font-bold font-serif mb-6 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             Bridging Artificial Intelligence and Clinical Medicine Through Education
           </h2>
-          <p className={`text-lg text-muted-foreground leading-relaxed transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-            We are building a world-class ecosystem at Stanford where educators, learners, 
-            clinicians, and industry leaders converge to advance the responsible integration 
-            of AI into healthcare — improving outcomes for patients everywhere.
+          <p className={`text-lg text-muted-foreground leading-relaxed transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>We are building a world-class ecosystem at Stanford where educators, learners, clinicians, and industry leaders converge to advance the responsible integration of AI into healthcare.
+
+
+
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default MissionSection;
