@@ -5,9 +5,9 @@ const Footer = () =>
     <div className="container">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-            <span className="text-sm font-bold text-primary-foreground font-serif">S</span>
-          </div>
+          
+
+        
           <p className="text-sm font-medium">Stanford AI in Medical Education</p>
         </div>
         <nav className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
