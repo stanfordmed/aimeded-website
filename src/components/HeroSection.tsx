@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import fundamentalTheorem from "@/assets/fundamental-theorem.png";
-import AntigravityCanvas from "@/components/AntigravityCanvas";
+
 
 const HeroSection = () => {
   return (
