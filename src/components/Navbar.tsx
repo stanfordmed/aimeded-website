@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import stanfordLogo from "@/assets/stanford-medicine-logo.svg";
 
 const navItems = [
 { label: "Home", path: "/" },
@@ -19,14 +20,8 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <span className="text-lg font-bold text-primary-foreground font-serif">S</span>
-          </div>
-          <div className="hidden sm:block">
-            <p className="text-sm font-semibold leading-tight tracking-tight">Stanford University</p>
-            <p className="text-xs text-muted-foreground leading-tight">AI in Medical Education</p>
-          </div>
+        <Link to="/" className="flex items-center">
+          <img src={stanfordLogo} alt="Stanford School of Medicine" className="h-14" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
