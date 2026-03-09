@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import fundamentalTheorem from "@/assets/fundamental-theorem.png";
-import AntigravityCanvas from "@/components/AntigravityCanvas";
+import { Brain, Monitor, User } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden min-h-[600px] flex items-center bg-stanford-dark">
-      <AntigravityCanvas />
-      
       <div className="absolute inset-0 bg-gradient-to-r from-stanford-dark/95 via-stanford-dark/80 to-stanford-dark/60" />
 
       <div className="container relative z-10 py-24 md:py-32">
@@ -18,8 +15,14 @@ const HeroSection = () => {
             AI & Medical Education
           </h1>
 
-          <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.7s" }}>
-            <img src={fundamentalTheorem} alt="The Fundamental Theorem of Informatics: (Human + Computer) > Human" className="max-w-md w-full" style={{ filter: "invert(1)" }} />
+          <div className="opacity-0 animate-slide-up flex items-center gap-2 text-white text-2xl md:text-3xl font-light" style={{ animationDelay: "0.7s" }}>
+            <span>(</span>
+            <User className="w-8 h-8 md:w-10 md:h-10" />
+            <span>+</span>
+            <Monitor className="w-8 h-8 md:w-10 md:h-10" />
+            <span>)</span>
+            <span className="mx-1">&gt;</span>
+            <User className="w-8 h-8 md:w-10 md:h-10" />
           </div>
 
           <p className="text-lg text-white/80 max-w-lg leading-relaxed opacity-0 animate-fade-up" style={{ animationDelay: "0.9s" }}>
