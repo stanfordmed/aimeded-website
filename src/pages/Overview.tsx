@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ArrowRight } from "lucide-react";
 
 const photos: Record<string, string> = {
   "Reena Thomas": "https://profiles.stanford.edu/proxy/api/cap/profiles/59474/resources/profilephoto/350x350.1726600104106.jpg",
@@ -14,102 +14,139 @@ const photos: Record<string, string> = {
   "Gabriel Tse": "https://profiles.stanford.edu/proxy/api/cap/profiles/314648/resources/profilephoto/350x350.1730850791254.jpg",
 };
 
-const getPhotoUrl = (name: string): string => {
-  const baseName = name.split(",")[0].trim();
-  return photos[baseName] || "";
+const profileLinks: Record<string, string> = {
+  "Reena Thomas": "https://profiles.stanford.edu/reena-thomas",
+  "Jonathan H. Chen": "https://profiles.stanford.edu/jonc101",
+  "Jonathan Chen": "https://profiles.stanford.edu/jonc101",
+  "Joe Gayk": "https://profiles.stanford.edu/joe-gayk",
+  "Rebecca Miller Kuhlmann": "https://profiles.stanford.edu/rebecca-miller",
+  "Tracy Rydel": "https://profiles.stanford.edu/tracy-rydel",
+  "Connie Wong": "https://profiles.stanford.edu/hong-nei-wong",
+  "Aydin Zahedivash": "https://profiles.stanford.edu/aydin-zahedivash",
+  "Alaa Youssef": "https://profiles.stanford.edu/alaa-youssef",
+  "Vishnu Ravi": "https://profiles.stanford.edu/vishnu-ravi",
+  "Gabriel Tse": "https://profiles.stanford.edu/gabe-tse",
 };
 
-const leadership = [
-  { name: "Reena Thomas, MD PhD", role: "Senior Associate Dean for Medical Education" },
-  { name: "Jonathan H. Chen, MD, PhD", role: "AI Faculty Champion" },
-  { name: "Joe Gayk", role: "Executive Director, Medical Education Innovation" },
-];
-
-const steeringCommittee = [
-  { name: "Jonathan Chen, MD, PhD", role: "AI Faculty Champion" },
-  { name: "Rebecca Miller Kuhlmann, MD", role: "Assistant Dean for Preclerkship Education" },
-  { name: "Tracy Rydel, MD", role: "Assistant Dean for Clerkship Education" },
-  { name: "Courtney Nelson, PA", role: "Director of Preclerkship Education (MSPA)" },
-  { name: "Teggin Summers, PhD, MA", role: "Assistant Dean and Director of EdTech (TDS)" },
-  { name: "Bahij Austin", role: "Assistant Dean for Curricular Affairs" },
-  { name: "Mo Sow, MD", role: "Associate Director for Curricular Analytics and Management" },
-  { name: "Connie Wong", role: "Medical Librarian and Information Literacy Expert" },
-  { name: "Joe Gayk, MS", role: "Executive Director, Med Ed Innovation" },
-];
-
-const curriculumTeam = [
-  { name: "Jonathan Chen, MD, PhD" },
-  { name: "Aydin Zahedivash, MD, MBA" },
-  { name: "Alaa Youssef, PhD" },
-  { name: "Vishnu Ravi, MD" },
-  { name: "Gabriel Tse, MD, MS" },
-];
-
+const getKey = (name: string) => name.split(",")[0].trim();
+const getPhotoUrl = (name: string) => photos[getKey(name)] || "";
+const getProfileLink = (name: string) => profileLinks[getKey(name)] || "";
 const getInitials = (name: string) => {
-  const parts = name.split(",")[0].trim().split(" ");
+  const parts = getKey(name).split(" ");
   return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
 };
 
-const PersonCard = ({ name, role }: { name: string; role?: string }) => (
-  <div className="flex flex-col items-center text-center space-y-3">
-    <Avatar className="h-24 w-24">
-      <AvatarImage src={getPhotoUrl(name)} alt={name} />
-      <AvatarFallback className="text-lg bg-muted text-muted-foreground">
-        {getInitials(name)}
-      </AvatarFallback>
-    </Avatar>
-    <div>
-      <span className="text-sm font-medium text-foreground block">{name}</span>
-      {role && <span className="text-xs text-muted-foreground block mt-1">{role}</span>}
+const leadership = [
+  { name: "Reena Thomas, MD, PhD", title: "Clinical Professor, Adult Neurology", role: "Senior Associate Dean for Medical Education" },
+  { name: "Jonathan H. Chen, MD, PhD", title: "Associate Professor of Medicine (Biomedical Informatics) and of Biomedical Data Science", role: "AI Faculty Champion" },
+  { name: "Joe Gayk, MS", title: "Executive Director, Medical Education Innovation", role: "Executive Director, Medical Education Innovation" },
+];
+
+const steeringCommittee = [
+  { name: "Jonathan Chen, MD, PhD", title: "Associate Professor of Medicine (Biomedical Informatics) and of Biomedical Data Science", role: "AI Faculty Champion" },
+  { name: "Rebecca Miller Kuhlmann, MD", title: "Clinical Associate Professor, Adult Neurology", role: "Assistant Dean for Preclerkship Education" },
+  { name: "Tracy Rydel, MD", title: "Clinical Professor, Medicine — Primary Care and Population Health", role: "Assistant Dean for Clerkship Education" },
+  { name: "Courtney Nelson, PA", title: "Clinical Assistant Professor, Medicine — Primary Care and Population Health", role: "Director of Preclerkship Education (MSPA)" },
+  { name: "Teggin Summers, PhD, MA", title: "Assistant Dean and Director of Educational Technology", role: "Assistant Dean and Director of EdTech (TDS)" },
+  { name: "Bahij Austin", title: "Assistant Dean for Curricular Affairs", role: "Assistant Dean for Curricular Affairs" },
+  { name: "Mo Sow, MD", title: "Associate Director for Curricular Analytics and Management", role: "Associate Director for Curricular Analytics and Management" },
+  { name: "Connie Wong", title: "Medical Education Librarian, Lane Medical Library", role: "Medical Librarian and Information Literacy Expert" },
+  { name: "Joe Gayk, MS", title: "Executive Director, Medical Education Innovation", role: "Executive Director, Med Ed Innovation" },
+];
+
+const curriculumTeam = [
+  { name: "Jonathan Chen, MD, PhD", title: "Associate Professor of Medicine (Biomedical Informatics) and of Biomedical Data Science" },
+  { name: "Aydin Zahedivash, MD, MBA", title: "Fellow in Pediatrics / Clinical Informatics" },
+  { name: "Alaa Youssef, PhD", title: "Affiliate, Integrative Biomedical Imaging Informatics at Stanford (IBIIS)" },
+  { name: "Vishnu Ravi, MD", title: "Clinical Assistant Professor, Medicine — Primary Care and Population Health; Technology Architect, Stanford Medicine Catalyst" },
+  { name: "Gabriel Tse, MD, MS", title: "Clinical Assistant Professor, Pediatrics" },
+];
+
+type Person = { name: string; title?: string; role?: string };
+
+const PersonCard = ({ person }: { person: Person }) => {
+  const photo = getPhotoUrl(person.name);
+  const link = getProfileLink(person.name);
+  const displayRole = person.role || person.title;
+
+  return (
+    <div className="flex items-stretch rounded-lg overflow-hidden" style={{ backgroundColor: '#f0ede8' }}>
+      <div className="flex-1 p-5 flex flex-col justify-center min-w-0">
+        {link ? (
+          <a href={link} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-1.5 mb-1.5">
+            <span className="text-base font-semibold font-serif text-foreground group-hover:text-primary transition-colors">{person.name}</span>
+            <ArrowRight className="h-3.5 w-3.5 text-primary flex-shrink-0" />
+          </a>
+        ) : (
+          <span className="text-base font-semibold font-serif text-foreground mb-1.5">{person.name}</span>
+        )}
+        {displayRole && (
+          <p className="text-xs text-muted-foreground leading-relaxed">{displayRole}</p>
+        )}
+      </div>
+      {photo ? (
+        <img
+          src={photo}
+          alt={person.name}
+          className="w-24 h-24 object-cover flex-shrink-0"
+        />
+      ) : (
+        <div className="w-24 h-24 flex-shrink-0 flex items-center justify-center bg-muted text-muted-foreground text-lg font-semibold">
+          {getInitials(person.name)}
+        </div>
+      )}
     </div>
-  </div>
-);
+  );
+};
 
 const Overview = () => (
   <main className="container py-24">
     <h1 className="text-4xl font-bold font-serif mb-6">Overview</h1>
-    
-    <div className="max-w-3xl space-y-6 text-base font-sans text-muted-foreground">
+
+    <div className="max-w-3xl space-y-6 text-base font-sans text-muted-foreground mb-20">
       <p>
         Stanford's AI in Medical Education initiative seeks to integrate foundational AI knowledge, clinical applications, and ethical reasoning into medical education. Through curriculum innovations, partnerships, and faculty development, we aim to prepare learners not just to use AI tools but to shape their evolution in service of patient care, research, and lifelong learning.
       </p>
-      
       <p>
         In collaboration with educators, clinicians, learners, and technologists, we seek to equip current and future health professionals with foundational AI knowledge, ethical reasoning skills, and fluency in AI-supported clinical decision making, with content designed to:
       </p>
-      
       <ul className="list-disc list-inside space-y-2 pl-4">
         <li>Build core AI literacy and vocabulary</li>
         <li>Enhance clinical reasoning with AI tools</li>
         <li>Explore AI applications in research and innovation</li>
         <li>Address the ethical, legal, and social implications of AI in healthcare</li>
       </ul>
-      
       <p>
         We believe that AI can be a powerful partner in delivering compassionate and evidence-based patient care. This initiative is grounded in Stanford's broader commitment to innovation and excellence in medical education.
       </p>
     </div>
 
-    <h2 className="text-3xl font-bold font-serif mt-16 mb-8">Our Leadership Team</h2>
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-16">
-      {leadership.map((m) => (
-        <PersonCard key={m.name} name={m.name} role={m.role} />
-      ))}
-    </div>
+    <section className="mb-20">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-6">Leadership</p>
+      <div className="grid md:grid-cols-2 gap-4">
+        {leadership.map((m) => (
+          <PersonCard key={m.name} person={m} />
+        ))}
+      </div>
+    </section>
 
-    <h2 className="text-2xl font-bold font-serif mb-8">AI in Medical Education Steering Committee</h2>
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-16">
-      {steeringCommittee.map((m) => (
-        <PersonCard key={m.name} name={m.name} role={m.role} />
-      ))}
-    </div>
+    <section className="mb-20">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-6">AI in Medical Education Steering Committee</p>
+      <div className="grid md:grid-cols-2 gap-4">
+        {steeringCommittee.map((m) => (
+          <PersonCard key={m.name} person={m} />
+        ))}
+      </div>
+    </section>
 
-    <h2 className="text-2xl font-bold font-serif mb-8">AI Curriculum Development Team</h2>
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-      {curriculumTeam.map((m) => (
-        <PersonCard key={m.name} name={m.name} />
-      ))}
-    </div>
+    <section>
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground mb-6">AI Curriculum Development Team</p>
+      <div className="grid md:grid-cols-2 gap-4">
+        {curriculumTeam.map((m) => (
+          <PersonCard key={m.name} person={m} />
+        ))}
+      </div>
+    </section>
   </main>
 );
 
