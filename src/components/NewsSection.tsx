@@ -40,7 +40,7 @@ const NewsSection = () => {
               </CardContent>
             );
             const cardClass = `group border-0 transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`;
-            const cardStyle = { backgroundColor: '#A6B168', transitionDelay: isVisible ? `${200 + i * 100}ms` : "0ms" };
+            const cardStyle = { backgroundColor: '#9D7AA0', transitionDelay: isVisible ? `${200 + i * 100}ms` : "0ms" };
             return item.link ? (
               <a key={i} href={item.link} target="_blank" rel="noopener noreferrer">
                 <Card className={cardClass} style={cardStyle}>
