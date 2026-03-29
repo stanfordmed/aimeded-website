@@ -1,4 +1,4 @@
-import { Carousel, CarouselContent, CarouselItem, useCarousel } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, ChevronLeft, ChevronRight, Video, FileText, Cpu, Zap, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -49,7 +49,8 @@ const FeaturedCarousel = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <SlimArrows />
+              <CarouselPrevious className="absolute -left-5 top-1/2 -translate-y-1/2 h-24 w-8 rounded-md bg-white/15 border-0 text-white hover:bg-white/25 backdrop-blur-sm" />
+              <CarouselNext className="absolute -right-5 top-1/2 -translate-y-1/2 h-24 w-8 rounded-md bg-white/15 border-0 text-white hover:bg-white/25 backdrop-blur-sm" />
             </div>
           </Carousel>
         </div>
