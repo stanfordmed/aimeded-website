@@ -20,8 +20,8 @@ const FeaturedCarousel = () => {
       <div className="container">
         <div className={`flex items-end justify-between mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-3">Featured</p>
-            <h2 className="text-3xl md:text-4xl font-bold font-serif">Programs & Resources</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-white/70 mb-3">Featured</p>
+            <h2 className="text-3xl md:text-4xl font-bold font-serif text-white">Programs & Resources</h2>
           </div>
         </div>
 
@@ -30,17 +30,17 @@ const FeaturedCarousel = () => {
             <CarouselContent className="-ml-4">
               {features.map((f, i) => (
                 <CarouselItem key={i} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <Card className="group h-full border-border/50 transition-all duration-300 overflow-hidden">
+                  <Card className="group h-full border-0 transition-all duration-300 overflow-hidden" style={{ backgroundColor: '#67AFD2' }}>
                     <CardContent className="p-6 flex flex-col h-full">
                       <div className="flex items-center justify-between mb-4">
-                        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20 text-white">
                           <f.icon className="h-5 w-5" />
                         </div>
-                        <span className="text-xs font-medium px-3 py-1 rounded-full bg-accent/15 text-accent-foreground">{f.tag}</span>
+                        <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/20 text-white">{f.tag}</span>
                       </div>
-                      <h3 className="text-lg font-semibold mb-2 font-serif">{f.title}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed flex-1">{f.desc}</p>
-                      <Link to={f.link} className="inline-flex items-center gap-2 text-sm font-medium text-primary mt-4 group-hover:gap-3 transition-all">
+                      <h3 className="text-lg font-semibold mb-2 font-serif text-white">{f.title}</h3>
+                      <p className="text-sm text-white/80 leading-relaxed flex-1">{f.desc}</p>
+                      <Link to={f.link} className="inline-flex items-center gap-2 text-sm font-medium text-white mt-4 group-hover:gap-3 transition-all">
                         Learn more <ArrowRight className="h-4 w-4" />
                       </Link>
                     </CardContent>
@@ -48,8 +48,8 @@ const FeaturedCarousel = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-4 lg:-left-12" />
-            <CarouselNext className="-right-4 lg:-right-12" />
+            <CarouselPrevious className="-left-4 lg:-left-12 bg-white/20 border-white/30 text-white hover:bg-white/30" />
+            <CarouselNext className="-right-4 lg:-right-12 bg-white/20 border-white/30 text-white hover:bg-white/30" />
           </Carousel>
         </div>
       </div>

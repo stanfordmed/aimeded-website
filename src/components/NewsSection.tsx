@@ -18,8 +18,8 @@ const NewsSection = () => {
     <section className="py-24" ref={ref}>
       <div className="container">
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          <p className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-3">Stay Informed</p>
-          <h2 className="text-3xl md:text-4xl font-bold font-serif">News & Publications</h2>
+          <p className="text-sm font-semibold uppercase tracking-[0.15em] text-white/70 mb-3">Stay Informed</p>
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-white">News & Publications</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -27,27 +27,28 @@ const NewsSection = () => {
             const inner = (
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-primary/10 text-primary">{item.category}</span>
-                  <span className="text-xs text-muted-foreground">{item.date}</span>
+                  <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-white/20 text-white">{item.category}</span>
+                  <span className="text-xs text-white/60">{item.date}</span>
                 </div>
-                <h3 className="font-semibold mb-2 leading-snug font-serif group-hover:text-primary transition-colors">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{item.summary}</p>
+                <h3 className="font-semibold mb-2 leading-snug font-serif text-white">{item.title}</h3>
+                <p className="text-sm text-white/80 leading-relaxed mb-4">{item.summary}</p>
                 {item.link && (
-                  <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary group-hover:gap-2.5 transition-all">
+                  <span className="inline-flex items-center gap-1.5 text-sm font-medium text-white group-hover:gap-2.5 transition-all">
                     Read more <ArrowRight className="h-3.5 w-3.5" />
                   </span>
                 )}
               </CardContent>
             );
-            const cardClass = `group border-border/50 transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`;
+            const cardClass = `group border-0 transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`;
+            const cardStyle = { backgroundColor: '#A6B168', transitionDelay: isVisible ? `${200 + i * 100}ms` : "0ms" };
             return item.link ? (
               <a key={i} href={item.link} target="_blank" rel="noopener noreferrer">
-                <Card className={cardClass} style={{ transitionDelay: isVisible ? `${200 + i * 100}ms` : "0ms" }}>
+                <Card className={cardClass} style={cardStyle}>
                   {inner}
                 </Card>
               </a>
             ) : (
-              <Card key={i} className={cardClass} style={{ transitionDelay: isVisible ? `${200 + i * 100}ms` : "0ms" }}>
+              <Card key={i} className={cardClass} style={cardStyle}>
                 {inner}
               </Card>
             );
