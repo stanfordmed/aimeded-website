@@ -23,12 +23,8 @@ const NewsSection = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {news.map((item, i) => (
-            <Card
-              key={i}
-              className={`group border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-500 cursor-pointer hover:-translate-y-1 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-              style={{ transitionDelay: isVisible ? `${200 + i * 100}ms` : "0ms" }}
-            >
+          {news.map((item, i) => {
+            const inner = (
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-primary/10 text-primary">{item.category}</span>
@@ -40,8 +36,20 @@ const NewsSection = () => {
                   Read more <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </CardContent>
-            </Card>
-          ))}
+            );
+            const cardClass = `group border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-500 cursor-pointer hover:-translate-y-1 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`;
+            return item.link ? (
+              <a key={i} href={item.link} target="_blank" rel="noopener noreferrer">
+                <Card className={cardClass} style={{ transitionDelay: isVisible ? `${200 + i * 100}ms` : "0ms" }}>
+                  {inner}
+                </Card>
+              </a>
+            ) : (
+              <Card key={i} className={cardClass} style={{ transitionDelay: isVisible ? `${200 + i * 100}ms` : "0ms" }}>
+                {inner}
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
