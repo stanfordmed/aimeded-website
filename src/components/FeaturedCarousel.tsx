@@ -1,6 +1,6 @@
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, useCarousel } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Video, FileText, Cpu, Zap, Wrench } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Video, FileText, Cpu, Zap, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -27,29 +27,30 @@ const FeaturedCarousel = () => {
 
         <div className={`transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}>
           <Carousel opts={{ align: "start", loop: true }} className="w-full">
-            <CarouselContent className="-ml-4">
-              {features.map((f, i) => (
-                <CarouselItem key={i} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <Card className="group h-full border-0 transition-all duration-300 overflow-hidden" style={{ backgroundColor: '#67AFD2' }}>
-                    <CardContent className="p-6 flex flex-col h-full">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20 text-white">
-                          <f.icon className="h-5 w-5" />
+            <div className="relative">
+              <CarouselContent className="-ml-4">
+                {features.map((f, i) => (
+                  <CarouselItem key={i} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                    <Card className="group h-full border-0 transition-all duration-300 overflow-hidden" style={{ backgroundColor: '#67AFD2' }}>
+                      <CardContent className="p-6 flex flex-col h-full">
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20 text-white">
+                            <f.icon className="h-5 w-5" />
+                          </div>
+                          <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/20 text-white">{f.tag}</span>
                         </div>
-                        <span className="text-xs font-medium px-3 py-1 rounded-full bg-white/20 text-white">{f.tag}</span>
-                      </div>
-                      <h3 className="text-lg font-semibold mb-2 font-serif text-white">{f.title}</h3>
-                      <p className="text-sm text-white/80 leading-relaxed flex-1">{f.desc}</p>
-                      <Link to={f.link} className="inline-flex items-center gap-2 text-sm font-medium text-white mt-4 group-hover:gap-3 transition-all">
-                        Learn more <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-2 bg-white/20 border-white/30 text-white hover:bg-white/30" />
-            <CarouselNext className="right-2 bg-white/20 border-white/30 text-white hover:bg-white/30" />
+                        <h3 className="text-lg font-semibold mb-2 font-serif text-white">{f.title}</h3>
+                        <p className="text-sm text-white/80 leading-relaxed flex-1">{f.desc}</p>
+                        <Link to={f.link} className="inline-flex items-center gap-2 text-sm font-medium text-white mt-4 group-hover:gap-3 transition-all">
+                          Learn more <ArrowRight className="h-4 w-4" />
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <SlimArrows />
+            </div>
           </Carousel>
         </div>
       </div>
