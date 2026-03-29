@@ -48,8 +48,8 @@ const FeaturedCarousel = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-4 lg:-left-12 bg-white/20 border-white/30 text-white hover:bg-white/30" />
-            <CarouselNext className="-right-4 lg:-right-12 bg-white/20 border-white/30 text-white hover:bg-white/30" />
+            <CarouselPrevious className="left-2 bg-white/20 border-white/30 text-white hover:bg-white/30" />
+            <CarouselNext className="right-2 bg-white/20 border-white/30 text-white hover:bg-white/30" />
           </Carousel>
         </div>
       </div>
