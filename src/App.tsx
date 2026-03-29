@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Overview from "./pages/Overview";
 import Learn from "./pages/Learn";
-import Apply from "./pages/Apply";
 import GetInvolved from "./pages/GetInvolved";
 import NotFound from "./pages/NotFound";
 
@@ -27,7 +26,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/overview" element={<Overview />} />
               <Route path="/learn" element={<Learn />} />
-              <Route path="/apply" element={<Apply />} />
+              
               <Route path="/get-involved" element={<GetInvolved />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
