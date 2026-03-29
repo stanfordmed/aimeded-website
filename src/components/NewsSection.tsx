@@ -15,7 +15,7 @@ const NewsSection = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="py-24 bg-background" ref={ref}>
+    <section className="py-24" ref={ref}>
       <div className="container">
         <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <p className="text-sm font-semibold uppercase tracking-[0.15em] text-primary mb-3">Stay Informed</p>
