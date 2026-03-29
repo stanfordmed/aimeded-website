@@ -6,11 +6,11 @@ import { Button } from "@/components/ui/button";
 import stanfordLogo from "@/assets/stanford-medicine-logo.svg";
 
 const navItems = [
-{ label: "Home", path: "/" },
-{ label: "Overview", path: "/overview" },
-{ label: "Learn", path: "/learn" },
-{ label: "Implement", path: "/apply" },
-{ label: "Get Involved", path: "/get-involved" }];
+  { label: "Home", path: "/" },
+  { label: "Overview", path: "/overview" },
+  { label: "Learn", path: "/learn" },
+  { label: "Get Involved", path: "/get-involved" },
+];
 
 
 const Navbar = () => {
