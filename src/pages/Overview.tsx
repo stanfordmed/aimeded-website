@@ -1,5 +1,24 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
+const photos: Record<string, string> = {
+  "Reena Thomas": "https://profiles.stanford.edu/proxy/api/cap/profiles/59474/resources/profilephoto/350x350.1726600104106.jpg",
+  "Jonathan H. Chen": "https://profiles.stanford.edu/proxy/api/cap/profiles/29899/resources/profilephoto/350x350.1509507449728.jpg",
+  "Jonathan Chen": "https://profiles.stanford.edu/proxy/api/cap/profiles/29899/resources/profilephoto/350x350.1509507449728.jpg",
+  "Joe Gayk": "https://profiles.stanford.edu/proxy/api/cap/profiles/224413/resources/profilephoto/350x350.1737142947840.jpg",
+  "Rebecca Miller Kuhlmann": "https://profiles.stanford.edu/proxy/api/cap/profiles/137460/resources/profilephoto/350x350.1527270875381.jpg",
+  "Tracy Rydel": "https://profiles.stanford.edu/proxy/api/cap/profiles/8258/resources/profilephoto/350x350.1620844036322.jpg",
+  "Connie Wong": "https://profiles.stanford.edu/proxy/api/cap/profiles/194564/resources/profilephoto/350x350.1647372458039.jpg",
+  "Aydin Zahedivash": "https://profiles.stanford.edu/proxy/api/cap/profiles/219053/resources/profilephoto/350x350.1640383651043.jpg",
+  "Alaa Youssef": "https://profiles.stanford.edu/proxy/api/cap/profiles/252733/resources/profilephoto/350x350.1630962592044.jpg",
+  "Vishnu Ravi": "https://profiles.stanford.edu/proxy/api/cap/profiles/310722/resources/profilephoto/350x350.1759335991946.jpg",
+  "Gabriel Tse": "https://profiles.stanford.edu/proxy/api/cap/profiles/314648/resources/profilephoto/350x350.1730850791254.jpg",
+};
+
+const getPhotoUrl = (name: string): string => {
+  const baseName = name.split(",")[0].trim();
+  return photos[baseName] || "";
+};
+
 const leadership = [
   { name: "Reena Thomas, MD PhD", role: "Senior Associate Dean for Medical Education" },
   { name: "Jonathan H. Chen, MD, PhD", role: "AI Faculty Champion" },
@@ -34,7 +53,7 @@ const getInitials = (name: string) => {
 const PersonCard = ({ name, role }: { name: string; role?: string }) => (
   <div className="flex flex-col items-center text-center space-y-3">
     <Avatar className="h-24 w-24">
-      <AvatarImage src="" alt={name} />
+      <AvatarImage src={getPhotoUrl(name)} alt={name} />
       <AvatarFallback className="text-lg bg-muted text-muted-foreground">
         {getInitials(name)}
       </AvatarFallback>
