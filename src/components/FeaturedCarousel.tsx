@@ -30,10 +30,10 @@ const FeaturedCarousel = () => {
             <CarouselContent className="-ml-4">
               {features.map((f, i) => (
                 <CarouselItem key={i} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <Card className="group h-full border-border/50 hover:border-primary/30 hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-1">
+                  <Card className="group h-full border-border/50 transition-all duration-300 overflow-hidden">
                     <CardContent className="p-6 flex flex-col h-full">
                       <div className="flex items-center justify-between mb-4">
-                        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
                           <f.icon className="h-5 w-5" />
                         </div>
                         <span className="text-xs font-medium px-3 py-1 rounded-full bg-accent/15 text-accent-foreground">{f.tag}</span>
