@@ -14,7 +14,7 @@ const Index = () => {
         <div className="rounded-lg shadow-sm overflow-hidden" style={{ backgroundColor: '#4298B5' }}>
           <FeaturedCarousel />
         </div>
-        <div className="rounded-lg shadow-sm overflow-hidden" style={{ backgroundColor: '#8F993E' }}>
+        <div className="rounded-lg shadow-sm overflow-hidden" style={{ backgroundColor: '#734675' }}>
           <NewsSection />
         </div>
       </div>
