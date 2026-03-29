@@ -1,16 +1,15 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Brain, Cpu, HeartPulse, Microscope, Lightbulb, Layers } from "lucide-react";
+import { ArrowRight, Video, FileText, Cpu, Zap, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const features = [
-  { icon: Brain, title: "Clinical AI Foundations", desc: "A comprehensive course covering machine learning fundamentals tailored for medical professionals.", link: "/learn", tag: "Course" },
-  { icon: HeartPulse, title: "AI-Assisted Diagnostics", desc: "Explore how deep learning models are transforming radiology, pathology, and cardiology diagnostics.", link: "/learn", tag: "Program" },
-  { icon: Cpu, title: "LLMs in Clinical Practice", desc: "Hands-on workshops for integrating large language models into clinical workflows responsibly.", link: "/learn", tag: "Workshop" },
-  { icon: Microscope, title: "Research Symposium 2026", desc: "Annual gathering of leading researchers presenting breakthroughs in medical AI applications.", link: "/overview", tag: "Event" },
-  { icon: Lightbulb, title: "Teaching with AI Toolkit", desc: "Curated resources and frameworks for educators to bring AI literacy into medical curricula.", link: "/learn", tag: "Toolkit" },
-  { icon: Layers, title: "Industry Partnership Program", desc: "Collaborate with Stanford to pilot AI tools in real clinical environments and shape the future.", link: "/get-involved", tag: "Partnership" },
+  { icon: Zap, title: "Lightning Demos: AI Tools for Medical Education", desc: "Carl Preiksaitis, MD · Mitra Alikhani, BSN, RN · Andrew Berg, MD · Sharon Chen, MD · Aydin Zahedivash, MD and more.", link: "/learn", tag: "Video", external: "https://youtu.be/R8B8k9NLtTc" },
+  { icon: Video, title: "Framing the Landscape: What AI Means for Medicine", desc: "Jonathan Chen, MD, PhD explores what AI means for the future of medicine at the 2025 Symposium.", link: "/learn", tag: "Video", external: "https://youtu.be/JRc03UJR4TY" },
+  { icon: FileText, title: "Using AI to Learn Medicine", desc: "A session for first-year Stanford medical students on using AI to enhance learning and clinical reasoning responsibly.", link: "/learn", tag: "Document", external: "https://med.stanford.edu/content/dam/sm/ai-in-meded/documents/Using%20AI%20to%20Learn%20Medicine_September%202025.pdf" },
+  { icon: Wrench, title: "AI in Clinical Practice: A Curriculum", desc: "An evidence-informed, modular curriculum outline providing foundational knowledge, clinical integration skills, and ethical-legal frameworks.", link: "/learn", tag: "Document", external: "https://med.stanford.edu/content/dam/sm/ai-in-meded/documents/AI%20Curriculum--Module%20List.pdf" },
+  { icon: Cpu, title: "Workshop: Basics of LLMs & Prompt Engineering", desc: "Shivam Vedak, MD, MBA and Dong-han Yao, MD lead a hands-on workshop on large language models and prompt engineering.", link: "/learn", tag: "Workshop", external: "https://youtu.be/xlMon7sXGig" },
 ];
 
 const FeaturedCarousel = () => {
