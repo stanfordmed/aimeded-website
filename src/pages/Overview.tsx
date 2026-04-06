@@ -12,6 +12,8 @@ const photos: Record<string, string> = {
   "Alaa Youssef": "https://profiles.stanford.edu/proxy/api/cap/profiles/252733/resources/profilephoto/350x350.1630962592044.jpg",
   "Vishnu Ravi": "https://profiles.stanford.edu/proxy/api/cap/profiles/310722/resources/profilephoto/350x350.1759335991946.jpg",
   "Gabriel Tse": "https://profiles.stanford.edu/proxy/api/cap/profiles/314648/resources/profilephoto/350x350.1730850791254.jpg",
+  "Shivam Vedak": "https://med.stanford.edu/services/api/cap/profiles/photocache.316192.jpg",
+  "Dong-han Yao": "https://med.stanford.edu/services/api/cap/profiles/photocache.34759.jpg",
 };
 
 const profileLinks: Record<string, string> = {
@@ -26,6 +28,8 @@ const profileLinks: Record<string, string> = {
   "Alaa Youssef": "https://profiles.stanford.edu/alaa-youssef",
   "Vishnu Ravi": "https://profiles.stanford.edu/vishnu-ravi",
   "Gabriel Tse": "https://profiles.stanford.edu/gabe-tse",
+  "Shivam Vedak": "https://profiles.stanford.edu/316192",
+  "Dong-han Yao": "https://profiles.stanford.edu/34759",
 };
 
 const getKey = (name: string) => name.split(",")[0].trim();
@@ -52,6 +56,8 @@ const steeringCommittee = [
   { name: "Mo Sow, MD", title: "Associate Director for Curricular Analytics and Management", role: "Associate Director for Curricular Analytics and Management" },
   { name: "Connie Wong", title: "Medical Education Librarian, Lane Medical Library", role: "Medical Librarian and Information Literacy Expert" },
   { name: "Joe Gayk, MS", title: "Executive Director, Medical Education Innovation", role: "Executive Director, Med Ed Innovation" },
+  { name: "Shivam Vedak, MD", title: "Clinical Assistant Professor, Medicine", role: "Associate Director for Artificial Intelligence in Medical Education" },
+  { name: "Dong-han Yao, MD", title: "Clinical Assistant Professor, Emergency Medicine", role: "Associate Director for Artificial Intelligence in Medical Education" },
 ];
 
 const curriculumTeam = [
