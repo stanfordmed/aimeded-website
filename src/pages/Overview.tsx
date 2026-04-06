@@ -12,6 +12,8 @@ const photos: Record<string, string> = {
   "Alaa Youssef": "https://profiles.stanford.edu/proxy/api/cap/profiles/252733/resources/profilephoto/350x350.1630962592044.jpg",
   "Vishnu Ravi": "https://profiles.stanford.edu/proxy/api/cap/profiles/310722/resources/profilephoto/350x350.1759335991946.jpg",
   "Gabriel Tse": "https://profiles.stanford.edu/proxy/api/cap/profiles/314648/resources/profilephoto/350x350.1730850791254.jpg",
+  "Shivam Vedak": "https://med.stanford.edu/services/api/cap/profiles/photocache.316192.jpg",
+  "Dong-han Yao": "https://med.stanford.edu/services/api/cap/profiles/photocache.34759.jpg",
 };
 
 const profileLinks: Record<string, string> = {
