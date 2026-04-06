@@ -56,8 +56,6 @@ const steeringCommittee = [
   { name: "Mo Sow, MD", title: "Associate Director for Curricular Analytics and Management", role: "Associate Director for Curricular Analytics and Management" },
   { name: "Connie Wong", title: "Medical Education Librarian, Lane Medical Library", role: "Medical Librarian and Information Literacy Expert" },
   { name: "Joe Gayk, MS", title: "Executive Director, Medical Education Innovation", role: "Executive Director, Med Ed Innovation" },
-  { name: "Shivam Vedak, MD", title: "Clinical Assistant Professor, Medicine", role: "Associate Director for Artificial Intelligence in Medical Education" },
-  { name: "Dong-han Yao, MD", title: "Clinical Assistant Professor, Emergency Medicine", role: "Associate Director for Artificial Intelligence in Medical Education" },
 ];
 
 const curriculumTeam = [
@@ -66,6 +64,8 @@ const curriculumTeam = [
   { name: "Alaa Youssef, PhD", title: "Affiliate, Integrative Biomedical Imaging Informatics at Stanford (IBIIS)" },
   { name: "Vishnu Ravi, MD", title: "Clinical Assistant Professor, Medicine — Primary Care and Population Health; Technology Architect, Stanford Medicine Catalyst" },
   { name: "Gabriel Tse, MD, MS", title: "Clinical Assistant Professor, Pediatrics" },
+  { name: "Shivam Vedak, MD", title: "Clinical Assistant Professor, Medicine; Associate Director for Artificial Intelligence in Medical Education" },
+  { name: "Dong-han Yao, MD", title: "Clinical Assistant Professor, Emergency Medicine; Associate Director for Artificial Intelligence in Medical Education" },
 ];
 
 type Person = { name: string; title?: string; role?: string };
