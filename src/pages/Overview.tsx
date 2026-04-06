@@ -15,6 +15,7 @@ const photos: Record<string, string> = {
   "Shivam Vedak": "https://med.stanford.edu/services/api/cap/profiles/photocache.316192.jpg",
   "Dong-han Yao": "https://med.stanford.edu/services/api/cap/profiles/photocache.34759.jpg",
   "Teggin Summers": "/images/teggin-summers.jpeg",
+  "Courtney Nelson": "/images/courtney-nelson.jpeg",
 };
 
 const profileLinks: Record<string, string> = {
