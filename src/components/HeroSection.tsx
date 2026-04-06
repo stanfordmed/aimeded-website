@@ -1,19 +1,38 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Brain, Monitor, User } from "lucide-react";
+import heroSlide1 from "@/assets/hero-slide-1.jpeg";
+
+const slides = [heroSlide1];
 
 const HeroSection = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (slides.length <= 1) return;
+    const timer = setInterval(() => setCurrent((c) => (c + 1) % slides.length), 6000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="relative overflow-hidden min-h-[600px] flex items-center bg-stanford-dark">
-      <div className="absolute inset-0 bg-gradient-to-r from-stanford-dark/95 via-stanford-dark/80 to-stanford-dark/60" />
+    <section className="relative overflow-hidden min-h-[600px] flex items-center">
+      {slides.map((src, i) => (
+        <img
+          key={i}
+          src={src}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+          style={{ opacity: i === current ? 1 : 0 }}
+        />
+      ))}
+      <div className="absolute inset-0 bg-black/60" />
 
       <div className="container relative z-10 py-24 md:py-32">
         <div className="max-w-2xl space-y-8">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent opacity-0 animate-fade-up" style={{ animationDelay: "0.2s" }}>STANFORD UNIVERSITY SCHOOL OF MEDICINE</p>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] font-serif opacity-0 animate-fade-up" style={{ animationDelay: "0.4s" }}>AI in Medical Education
-
-          </h1>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] font-serif opacity-0 animate-fade-up" style={{ animationDelay: "0.4s" }}>AI in Medical Education</h1>
 
           <div className="opacity-0 animate-slide-up flex items-center gap-2 text-white text-2xl md:text-3xl font-light" style={{ animationDelay: "0.7s" }}>
             <span>(</span>
@@ -45,7 +64,6 @@ const HeroSection = () => {
         </div>
       </div>
     </section>);
-
 };
 
 export default HeroSection;
