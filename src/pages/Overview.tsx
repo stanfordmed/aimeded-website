@@ -28,6 +28,8 @@ const profileLinks: Record<string, string> = {
   "Alaa Youssef": "https://profiles.stanford.edu/alaa-youssef",
   "Vishnu Ravi": "https://profiles.stanford.edu/vishnu-ravi",
   "Gabriel Tse": "https://profiles.stanford.edu/gabe-tse",
+  "Shivam Vedak": "https://profiles.stanford.edu/316192",
+  "Dong-han Yao": "https://profiles.stanford.edu/34759",
 };
 
 const getKey = (name: string) => name.split(",")[0].trim();
