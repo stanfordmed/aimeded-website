@@ -56,6 +56,8 @@ const steeringCommittee = [
   { name: "Mo Sow, MD", title: "Associate Director for Curricular Analytics and Management", role: "Associate Director for Curricular Analytics and Management" },
   { name: "Connie Wong", title: "Medical Education Librarian, Lane Medical Library", role: "Medical Librarian and Information Literacy Expert" },
   { name: "Joe Gayk, MS", title: "Executive Director, Medical Education Innovation", role: "Executive Director, Med Ed Innovation" },
+  { name: "Shivam Vedak, MD", title: "Clinical Assistant Professor, Medicine", role: "Associate Director for Artificial Intelligence in Medical Education" },
+  { name: "Dong-han Yao, MD", title: "Clinical Assistant Professor, Emergency Medicine", role: "Associate Director for Artificial Intelligence in Medical Education" },
 ];
 
 const curriculumTeam = [
