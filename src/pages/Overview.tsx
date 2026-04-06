@@ -17,6 +17,7 @@ const photos: Record<string, string> = {
   "Teggin Summers": "/images/teggin-summers.jpeg",
   "Courtney Nelson": "/images/courtney-nelson.jpeg",
   "Bahij Austin": "/images/bahij-austin.jpg",
+  "Mo Sow": "/images/mo-sow.jpeg",
 };
 
 const profileLinks: Record<string, string> = {
