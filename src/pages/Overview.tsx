@@ -56,7 +56,7 @@ const steeringCommittee = [
 
 const curriculumTeam = [
   { name: "Jonathan Chen, MD, PhD", title: "Associate Professor of Medicine (Biomedical Informatics) and of Biomedical Data Science" },
-  { name: "Aydin Zahedivash, MD, MBA", title: "Fellow in Pediatrics / Clinical Informatics" },
+  { name: "Aydin Zahedivash, MD, MBA", title: "Fellow in Pediatrics / Clinical Informatics; AI Curriculum Development Team Lead" },
   { name: "Alaa Youssef, PhD", title: "Affiliate, Integrative Biomedical Imaging Informatics at Stanford (IBIIS)" },
   { name: "Vishnu Ravi, MD", title: "Clinical Assistant Professor, Medicine — Primary Care and Population Health; Technology Architect, Stanford Medicine Catalyst" },
   { name: "Gabriel Tse, MD, MS", title: "Clinical Assistant Professor, Pediatrics" },
