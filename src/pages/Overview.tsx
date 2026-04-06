@@ -9,7 +9,7 @@ const photos: Record<string, string> = {
   "Tracy Rydel": "https://profiles.stanford.edu/proxy/api/cap/profiles/8258/resources/profilephoto/350x350.1620844036322.jpg",
   "Connie Wong": "/images/connie-wong.jpg",
   "Aydin Zahedivash": "https://profiles.stanford.edu/proxy/api/cap/profiles/219053/resources/profilephoto/350x350.1640383651043.jpg",
-  "Alaa Youssef": "https://profiles.stanford.edu/proxy/api/cap/profiles/252733/resources/profilephoto/350x350.1630962592044.jpg",
+  "Alaa Youssef": "/images/alaa-youssef.png",
   "Vishnu Ravi": "https://profiles.stanford.edu/proxy/api/cap/profiles/310722/resources/profilephoto/350x350.1759335991946.jpg",
   "Gabriel Tse": "https://profiles.stanford.edu/proxy/api/cap/profiles/314648/resources/profilephoto/350x350.1730850791254.jpg",
   "Shivam Vedak": "https://med.stanford.edu/services/api/cap/profiles/photocache.316192.jpg",
