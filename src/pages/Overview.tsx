@@ -14,6 +14,7 @@ const photos: Record<string, string> = {
   "Gabriel Tse": "https://profiles.stanford.edu/proxy/api/cap/profiles/314648/resources/profilephoto/350x350.1730850791254.jpg",
   "Shivam Vedak": "https://med.stanford.edu/services/api/cap/profiles/photocache.316192.jpg",
   "Dong-han Yao": "https://med.stanford.edu/services/api/cap/profiles/photocache.34759.jpg",
+  "Teggin Summers": "/images/teggin-summers.jpeg",
 };
 
 const profileLinks: Record<string, string> = {
