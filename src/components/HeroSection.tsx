@@ -5,6 +5,7 @@ import { Brain, Monitor, User } from "lucide-react";
 import heroSlide1 from "@/assets/hero-slide-1.jpeg";
 import heroSlide2 from "@/assets/hero-slide-2.jpeg";
 import heroSlide3 from "@/assets/hero-slide-3.jpeg";
+import heroSlide4 from "@/assets/hero-slide-4.jpeg";
 
 const slides = [heroSlide1, heroSlide2, heroSlide3];
 
