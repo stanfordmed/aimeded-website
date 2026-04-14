@@ -1,5 +1,20 @@
-import { FileText, Video, ExternalLink, Handshake } from "lucide-react";
+import { FileText, Video, ExternalLink, Handshake, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+
+const learningModules = [
+  {
+    title: "Explore AI Diagnostic Performance",
+    url: "https://stanfordmed.github.io/aimeded/ai-evaluation/",
+    description:
+      "An interactive tutorial on interpreting AI diagnostic performance metrics. Using a chest X-ray pneumonia detection example, learn how threshold adjustments affect sensitivity, specificity, and predictive values across different clinical scenarios.",
+  },
+  {
+    title: "Data Security, Privacy & AI",
+    url: "https://stanfordmed.github.io/aimeded/data-security/",
+    description:
+      "Learn how HIPAA and patient privacy apply in the age of AI. Covers encryption, access controls, audit logs, breach reporting, and practical guidance for using AI tools responsibly with protected health information.",
+  },
+];
 
 const documents = [
   {
