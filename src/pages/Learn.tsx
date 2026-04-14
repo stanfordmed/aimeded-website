@@ -1,5 +1,20 @@
-import { FileText, Video, ExternalLink, Handshake } from "lucide-react";
+import { FileText, Video, ExternalLink, Handshake, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+
+const learningModules = [
+  {
+    title: "Explore AI Diagnostic Performance",
+    url: "https://stanfordmed.github.io/aimeded/ai-evaluation/",
+    description:
+      "An interactive tutorial on interpreting AI diagnostic performance metrics. Using a chest X-ray pneumonia detection example, learn how threshold adjustments affect sensitivity, specificity, and predictive values across different clinical scenarios.",
+  },
+  {
+    title: "Data Security, Privacy & AI",
+    url: "https://stanfordmed.github.io/aimeded/data-security/",
+    description:
+      "Learn how HIPAA and patient privacy apply in the age of AI. Covers encryption, access controls, audit logs, breach reporting, and practical guidance for using AI tools responsibly with protected health information.",
+  },
+];
 
 const documents = [
   {
@@ -99,6 +114,32 @@ const Learn = () => (
                 <ExternalLink className="h-4 w-4 shrink-0" />
               </a>
               <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{doc.description}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </section>
+
+    {/* Learning Modules */}
+    <section className="mb-16">
+      <div className="flex items-center gap-2 mb-6">
+        <GraduationCap className="h-5 w-5 text-primary" />
+        <h2 className="text-2xl font-bold font-serif">Interactive Learning Modules</h2>
+      </div>
+      <div className="space-y-4">
+        {learningModules.map((mod) => (
+          <Card key={mod.title} className="border-border/50 hover:border-primary/30 transition-colors">
+            <CardContent className="p-5">
+              <a
+                href={mod.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg font-semibold text-primary hover:underline inline-flex items-center gap-1.5"
+              >
+                {mod.title}
+                <ExternalLink className="h-4 w-4 shrink-0" />
+              </a>
+              <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{mod.description}</p>
             </CardContent>
           </Card>
         ))}
