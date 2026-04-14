@@ -120,6 +120,32 @@ const Learn = () => (
       </div>
     </section>
 
+    {/* Learning Modules */}
+    <section className="mb-16">
+      <div className="flex items-center gap-2 mb-6">
+        <GraduationCap className="h-5 w-5 text-primary" />
+        <h2 className="text-2xl font-bold font-serif">Interactive Learning Modules</h2>
+      </div>
+      <div className="space-y-4">
+        {learningModules.map((mod) => (
+          <Card key={mod.title} className="border-border/50 hover:border-primary/30 transition-colors">
+            <CardContent className="p-5">
+              <a
+                href={mod.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg font-semibold text-primary hover:underline inline-flex items-center gap-1.5"
+              >
+                {mod.title}
+                <ExternalLink className="h-4 w-4 shrink-0" />
+              </a>
+              <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{mod.description}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </section>
+
     {/* Symposium Videos */}
     <section className="mb-16">
       <div className="flex items-center gap-2 mb-2">
