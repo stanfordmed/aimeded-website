@@ -7,17 +7,17 @@ const photos: Record<string, string> = {
   "Joe Gayk": "https://profiles.stanford.edu/proxy/api/cap/profiles/224413/resources/profilephoto/350x350.1737142947840.jpg",
   "Rebecca Miller Kuhlmann": "https://profiles.stanford.edu/proxy/api/cap/profiles/137460/resources/profilephoto/350x350.1527270875381.jpg",
   "Tracy Rydel": "https://profiles.stanford.edu/proxy/api/cap/profiles/8258/resources/profilephoto/350x350.1620844036322.jpg",
-  "Connie Wong": "/images/connie-wong.jpg",
+  "Connie Wong": `${import.meta.env.BASE_URL}images/connie-wong.jpg`,
   "Aydin Zahedivash": "https://profiles.stanford.edu/proxy/api/cap/profiles/219053/resources/profilephoto/350x350.1640383651043.jpg",
-  "Alaa Youssef": "/images/alaa-youssef.png",
+  "Alaa Youssef": `${import.meta.env.BASE_URL}images/alaa-youssef.png`,
   "Vishnu Ravi": "https://profiles.stanford.edu/proxy/api/cap/profiles/310722/resources/profilephoto/350x350.1759335991946.jpg",
   "Gabriel Tse": "https://profiles.stanford.edu/proxy/api/cap/profiles/314648/resources/profilephoto/350x350.1730850791254.jpg",
   "Shivam Vedak": "https://med.stanford.edu/services/api/cap/profiles/photocache.316192.jpg",
   "Dong-han Yao": "https://med.stanford.edu/services/api/cap/profiles/photocache.34759.jpg",
-  "Teggin Summers": "/images/teggin-summers.jpeg",
-  "Courtney Nelson": "/images/courtney-nelson.jpeg",
-  "Bahij Austin": "/images/bahij-austin.jpg",
-  "Mo Sow": "/images/mo-sow.jpeg",
+  "Teggin Summers": `${import.meta.env.BASE_URL}images/teggin-summers.jpeg`,
+  "Courtney Nelson": `${import.meta.env.BASE_URL}images/courtney-nelson.jpeg`,
+  "Bahij Austin": `${import.meta.env.BASE_URL}images/bahij-austin.jpg`,
+  "Mo Sow": `${import.meta.env.BASE_URL}images/mo-sow.jpeg`,
 };
 
 const profileLinks: Record<string, string> = {
