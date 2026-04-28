@@ -1,73 +1,45 @@
-# Welcome to your Lovable project
+# AI in Medical Education — Stanford Medicine
 
-## Project info
+The public-facing site for Stanford Medicine's AI in Medical Education initiative, which integrates foundational AI knowledge, clinical applications, and ethical reasoning into medical education.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Live site:** https://stanfordmed.github.io/aimeded-website/
 
-## How can I edit this code?
+## Tech stack
 
-There are several ways of editing your application.
+- [Vite](https://vitejs.dev/) + [React 18](https://react.dev/) + TypeScript
+- [React Router](https://reactrouter.com/) for client-side routing
+- [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) (Radix primitives)
+- [Bun](https://bun.sh/) as the package manager and runtime in CI
 
-**Use Lovable**
+## Local development
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requires [Bun](https://bun.sh/) (or Node + npm if you prefer — `package.json` works either way).
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+bun install
+bun run dev      # start dev server on http://localhost:8080
+bun run build    # production build
+bun run preview  # preview the production build locally
+bun test         # run the vitest suite
 ```
 
-**Edit a file directly in GitHub**
+## Project structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+public/images/        Local team photos served as static assets
+src/
+  pages/              Route-level components (Index, Overview, Learn, GetInvolved)
+  components/         Page sections and shared UI
+  components/ui/      shadcn/ui primitives
+  assets/             Bundled images (hero, logos, etc.)
+```
 
-**Use GitHub Codespaces**
+## Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds the site with Bun and publishes the `dist/` folder to GitHub Pages. The workflow also copies `index.html` to `404.html` so client-side routes resolve on direct navigation.
 
-## What technologies are used for this project?
+The site is served from a sub-path (`/aimeded-website/`), so:
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- `vite.config.ts` sets `base: "/aimeded-website/"`
+- `BrowserRouter` is configured with the matching `basename`
+- References to files in `public/` must be prefixed with `import.meta.env.BASE_URL` (e.g. `` `${import.meta.env.BASE_URL}images/foo.jpg` ``), not a leading `/`, or they will 404 in production.
