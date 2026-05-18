@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const news = [
-  { date: "Jun 1, 2026", category: "Event", title: "Stanford's AI in Medical Education Symposium", summary: "A premier event as part of AI Week at Stanford, bringing together educators, clinicians, and researchers to explore the future of AI in medical education.", link: "" },
+  { date: "Jun 1, 2026", category: "Event", title: "Stanford's AI in Medical Education Symposium", summary: "A premier event as part of AI Week at Stanford, bringing together educators, clinicians, and researchers to explore the future of AI in medical education.", link: "https://events.stanford.edu/event/ai-in-med-ed-symposium" },
   { date: "May–Jun 2026", category: "Program", title: "Stanford AI in Healthcare Leadership and Strategy Program (HAILS)", summary: "Launch of the HAILS program, equipping healthcare leaders with the strategic knowledge and skills to drive AI adoption in their organizations.", link: "https://med.stanford.edu/cme/featured-programs/aiinhealthcare.html" },
   { date: "Mar 11, 2026", category: "Publication", title: "From iPatient to Ai-Patient: A Responsibility to Medical Education", summary: "An editorial published in BMJ Digital Health exploring how AI is reshaping the patient–physician relationship and the implications for medical training.", link: "https://bmjdigitalhealth.bmj.com/content/2/1/f000082" },
   { date: "Feb 20, 2026", category: "Workshop", title: "Prompt Engineering Workshop for Clerkship Students", summary: "Stanford's AI in Med Ed team delivers a hands-on prompt engineering workshop helping clerkship students effectively leverage AI tools in clinical rotations." },
