@@ -14,6 +14,7 @@ const photos: Record<string, string> = {
   "Gabriel Tse": "https://profiles.stanford.edu/proxy/api/cap/profiles/314648/resources/profilephoto/350x350.1730850791254.jpg",
   "Shivam Vedak": "https://med.stanford.edu/services/api/cap/profiles/photocache.316192.jpg",
   "Dong-han Yao": "https://med.stanford.edu/services/api/cap/profiles/photocache.34759.jpg",
+  "Bethel Mieso": "https://med.stanford.edu/services/api/cap/profiles/photocache.259615.jpg",
   "Teggin Summers": `${import.meta.env.BASE_URL}images/teggin-summers.jpeg`,
   "Courtney Nelson": `${import.meta.env.BASE_URL}images/courtney-nelson.jpeg`,
   "Bahij Austin": `${import.meta.env.BASE_URL}images/bahij-austin.jpg`,
@@ -34,6 +35,7 @@ const profileLinks: Record<string, string> = {
   "Gabriel Tse": "https://profiles.stanford.edu/gabe-tse",
   "Shivam Vedak": "https://profiles.stanford.edu/316192",
   "Dong-han Yao": "https://profiles.stanford.edu/34759",
+  "Bethel Mieso": "https://profiles.stanford.edu/bethel-mieso",
 };
 
 const getKey = (name: string) => name.split(",")[0].trim();
@@ -70,6 +72,7 @@ const curriculumTeam = [
   { name: "Gabriel Tse, MD, MS", title: "Clinical Assistant Professor, Pediatrics" },
   { name: "Shivam Vedak, MD", title: "Clinical Assistant Professor, Medicine; Associate Director for Artificial Intelligence in Medical Education" },
   { name: "Dong-han Yao, MD", title: "Clinical Assistant Professor, Emergency Medicine; Associate Director for Artificial Intelligence in Medical Education" },
+  { name: "Bethel Mieso, MD", title: "Fellow in Pediatrics / Clinical Informatics" },
 ];
 
 type Person = { name: string; title?: string; role?: string };
