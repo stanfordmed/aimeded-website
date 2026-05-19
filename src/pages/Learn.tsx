@@ -1,7 +1,26 @@
+import type { ReactNode } from "react";
 import { FileText, Video, ExternalLink, Handshake, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-const learningModules = [
+const learningModules: { title: string; url: string; description: ReactNode }[] = [
+  {
+    title: "What is AI?",
+    url: "https://docs.google.com/presentation/d/16s0MdSmhnXFyrTyETx7PLuTzLc87_Lqn10gSwrsMbH8/edit?usp=sharing",
+    description: (
+      <>
+        A slide deck introducing foundational AI concepts, free for anyone to use at their own institutions. Includes a{" "}
+        <a
+          href="https://docs.google.com/document/d/1dXUm-egnLK2KqnScwX1ty6j4dwww7nW3Qu6A6RTGIHY/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold text-primary hover:underline"
+        >
+          matching activity handout
+        </a>{" "}
+        designed to teach machine learning and AI model subtypes to medical trainees.
+      </>
+    ),
+  },
   {
     title: "Explore AI Diagnostic Performance",
     url: "https://stanfordmed.github.io/aimeded/ai-evaluation/",
