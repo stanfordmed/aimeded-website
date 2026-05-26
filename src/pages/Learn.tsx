@@ -2,10 +2,11 @@ import type { ReactNode } from "react";
 import { FileText, Video, ExternalLink, Handshake, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-const learningModules: { title: string; url: string; description: ReactNode }[] = [
+const learningModules: { title: string; url: string; authors: string; description: ReactNode }[] = [
   {
     title: "What is AI?",
     url: "https://docs.google.com/presentation/d/16s0MdSmhnXFyrTyETx7PLuTzLc87_Lqn10gSwrsMbH8/edit?usp=sharing",
+    authors: "Gabriel Tse, MBChB, MS · Aydin Zahedivash, MD, MBA",
     description: (
       <>
         A slide deck introducing foundational AI concepts, free for anyone to use at their own institutions. Includes a{" "}
@@ -24,12 +25,14 @@ const learningModules: { title: string; url: string; description: ReactNode }[] 
   {
     title: "Explore AI Diagnostic Performance",
     url: "https://stanfordmed.github.io/aimeded/ai-evaluation/",
+    authors: "Vishnu Ravi, MD · Alaa Youssef, PhD · Aydin Zahedivash, MD, MBA · Gabriel Tse, MD · Jonathan Chen, MD, PhD",
     description:
       "An interactive tutorial on interpreting AI diagnostic performance metrics. Using a chest X-ray pneumonia detection example, learn how threshold adjustments affect sensitivity, specificity, and predictive values across different clinical scenarios.",
   },
   {
     title: "Data Security, Privacy & AI",
     url: "https://stanfordmed.github.io/aimeded/data-security/",
+    authors: "Aydin Zahedivash, MD, MBA · Vishnu Ravi, MD · Jonathan Chen, MD, PhD",
     description:
       "Learn how HIPAA and patient privacy apply in the age of AI. Covers encryption, access controls, audit logs, breach reporting, and practical guidance for using AI tools responsibly with protected health information.",
   },
@@ -75,7 +78,7 @@ const symposiumVideos = [
   {
     title: "Lightning Demos: AI Tools for Medical Education",
     speakers:
-      "Carl Preiksaitis, MD · Mitra Alikhani, BSN, RN · Andrew Berg, MD · Ben Muller, MD · Sharon Chen, MD · Aydin Zahedivash, MD · Marcos Santiago-Rojas · Tom Caruso, MD",
+      "Carl Preiksaitis, MD · Mitra Alikhani, BSN, RN · Andrew Berg, MD · Ben Muller, MD · Sharon Chen, MD · Aydin Zahedivash, MD, MBA · Marcos Santiago-Rojas · Tom Caruso, MD",
     url: "https://youtu.be/R8B8k9NLtTc",
   },
   {
@@ -158,6 +161,7 @@ const Learn = () => (
                 {mod.title}
                 <ExternalLink className="h-4 w-4 shrink-0" />
               </a>
+              <p className="text-sm text-muted-foreground mt-1">{mod.authors}</p>
               <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{mod.description}</p>
             </CardContent>
           </Card>

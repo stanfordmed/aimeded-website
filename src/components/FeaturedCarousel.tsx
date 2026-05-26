@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const features = [
-  { icon: Zap, title: "Lightning Demos: AI Tools for Medical Education", desc: "Carl Preiksaitis, MD · Mitra Alikhani, BSN, RN · Andrew Berg, MD · Sharon Chen, MD · Aydin Zahedivash, MD and more.", link: "/learn", tag: "Video", external: "https://youtu.be/R8B8k9NLtTc" },
+  { icon: Zap, title: "Lightning Demos: AI Tools for Medical Education", desc: "Carl Preiksaitis, MD · Mitra Alikhani, BSN, RN · Andrew Berg, MD · Sharon Chen, MD · Aydin Zahedivash, MD, MBA and more.", link: "/learn", tag: "Video", external: "https://youtu.be/R8B8k9NLtTc" },
   { icon: Video, title: "Framing the Landscape: What AI Means for Medicine", desc: "Jonathan Chen, MD, PhD explores what AI means for the future of medicine at the 2025 Symposium.", link: "/learn", tag: "Video", external: "https://youtu.be/JRc03UJR4TY" },
   { icon: FileText, title: "Using AI to Learn Medicine", desc: "A session for first-year Stanford medical students on using AI to enhance learning and clinical reasoning responsibly.", link: "/learn", tag: "Document", external: "https://med.stanford.edu/content/dam/sm/ai-in-meded/documents/Using%20AI%20to%20Learn%20Medicine_September%202025.pdf" },
   { icon: Wrench, title: "AI in Clinical Practice: A Curriculum", desc: "An evidence-informed, modular curriculum outline providing foundational knowledge, clinical integration skills, and ethical-legal frameworks.", link: "/learn", tag: "Document", external: "https://med.stanford.edu/content/dam/sm/ai-in-meded/documents/AI%20Curriculum--Module%20List.pdf" },
