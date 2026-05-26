@@ -113,7 +113,16 @@ const Learn = () => (
   <main className="container py-24 max-w-4xl">
     <h1 className="text-4xl font-bold font-serif mb-2">Resources</h1>
     <p className="text-lg text-muted-foreground mb-12">
-      Courses, workshops, and resources for students, educators, and clinicians looking to build AI competencies.
+      Courses, workshops, and resources for students, educators, and clinicians looking to build AI competencies. Don&apos;t see what you&apos;re looking for? Submit an idea for an educational module{" "}
+      <a
+        href="https://forms.gle/ydT26iSGrnvz61Uh7"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-bold text-primary hover:underline"
+      >
+        here
+      </a>
+      .
     </p>
 
     {/* Documents */}
