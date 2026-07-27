@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 import { FileText, Video, ExternalLink, Handshake, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -182,27 +182,61 @@ const Learn = () => (
     <section className="mb-16">
       <div className="flex items-center gap-2 mb-2">
         <Video className="h-5 w-5 text-primary" />
-        <h2 className="text-2xl font-bold font-serif">Videos and Recordings</h2>
+        <h2 className="text-2xl font-bold font-serif">Lectures and Talks</h2>
       </div>
       <p className="text-muted-foreground mb-6 text-sm">AI in Medical Education Symposium — June 4, 2025</p>
       <div className="space-y-4">
         {symposiumVideos.map((video) => (
-          <Card key={video.title} className="border-border/50 hover:border-primary/30 transition-colors">
-            <CardContent className="p-5 flex items-start justify-between gap-4">
-              <div className="min-w-0">
-                <h3 className="font-semibold">{video.title}</h3>
-                <p className="text-sm text-muted-foreground mt-1">{video.speakers}</p>
-              </div>
-              <a
-                href={video.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline mt-0.5"
-              >
-                Watch <ExternalLink className="h-3.5 w-3.5" />
-              </a>
-            </CardContent>
-          </Card>
+          <Fragment key={video.title}>
+            <Card className="border-border/50 hover:border-primary/30 transition-colors">
+              <CardContent className="p-5 flex items-start justify-between gap-4">
+                <div className="min-w-0">
+                  <h3 className="font-semibold">{video.title}</h3>
+                  <p className="text-sm text-muted-foreground mt-1">{video.speakers}</p>
+                </div>
+                <a
+                  href={video.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shrink-0 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline mt-0.5"
+                >
+                  Watch <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </CardContent>
+            </Card>
+
+            {video.title === "Lightning Demos: AI Tools for Medical Education" && (
+              <Card className="border-border/50 hover:border-primary/30 transition-colors">
+                <CardContent className="p-5 flex items-start justify-between gap-4">
+                  <div className="min-w-0">
+                    <h3 className="font-semibold">From Chatbot to Workflow: AI in Preclinical Medical Education</h3>
+                    <p className="text-sm text-muted-foreground mt-1">Harrison Konsker, Medical Student — Stanford University</p>
+                    <p className="text-sm text-muted-foreground mt-2">
+                      A presentation on how to use AI to enhance preclinical education. Medical students can also explore a{" "}
+                      <a
+                        href="https://harrisonkonsker.github.io/#toolkit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline inline-flex items-center gap-1.5"
+                      >
+                        guide with all the resources they can use to enhance their learning
+                        <ExternalLink className="h-3.5 w-3.5 shrink-0" />
+                      </a>
+                      .
+                    </p>
+                  </div>
+                  <a
+                    href="https://docs.google.com/presentation/d/1uaOcQlXT8j_cbQI2sPRvklEHLUx5VkFeFH59H7eLosY/edit?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline mt-0.5"
+                  >
+                    View slides <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                </CardContent>
+              </Card>
+            )}
+          </Fragment>
         ))}
       </div>
     </section>
