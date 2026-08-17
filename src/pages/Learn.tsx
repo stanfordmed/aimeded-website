@@ -191,7 +191,7 @@ const Learn = () => (
             <Card className="border-border/50 hover:border-primary/30 transition-colors">
               <CardContent className="p-5 flex items-start justify-between gap-4">
                 <div className="min-w-0">
-                  <h3 className="font-semibold">{video.title}</h3>
+                  <h3 className="text-lg font-semibold font-sans">{video.title}</h3>
                   <p className="text-sm text-muted-foreground mt-1">{video.speakers}</p>
                 </div>
                 <a
@@ -209,7 +209,7 @@ const Learn = () => (
               <Card className="border-border/50 hover:border-primary/30 transition-colors">
                 <CardContent className="p-5 flex items-start justify-between gap-4">
                   <div className="min-w-0">
-                    <h3 className="font-semibold">From Chatbot to Workflow: AI in Preclinical Medical Education</h3>
+                    <h3 className="text-lg font-semibold font-sans">From Chatbot to Workflow: AI in Preclinical Medical Education</h3>
                     <p className="text-sm text-muted-foreground mt-1">Harrison Konsker, Medical Student — Stanford University</p>
                     <p className="text-sm text-muted-foreground mt-2">
                       A presentation on how to use AI to enhance preclinical education. Medical students can also explore a{" "}
