@@ -189,50 +189,46 @@ const Learn = () => (
         {symposiumVideos.map((video) => (
           <Fragment key={video.title}>
             <Card className="border-border/50 hover:border-primary/30 transition-colors">
-              <CardContent className="p-5 flex items-start justify-between gap-4">
-                <div className="min-w-0">
-                  <h3 className="text-lg font-semibold font-sans">{video.title}</h3>
-                  <p className="text-sm text-muted-foreground mt-1">{video.speakers}</p>
-                </div>
+              <CardContent className="p-5">
                 <a
                   href={video.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="shrink-0 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline mt-0.5"
+                  className="text-lg font-semibold text-primary hover:underline inline-flex items-center gap-1.5"
                 >
-                  Watch <ExternalLink className="h-3.5 w-3.5" />
+                  {video.title}
+                  <ExternalLink className="h-4 w-4 shrink-0" />
                 </a>
+                <p className="text-sm text-muted-foreground mt-1">{video.speakers}</p>
               </CardContent>
             </Card>
 
             {video.title === "Lightning Demos: AI Tools for Medical Education" && (
               <Card className="border-border/50 hover:border-primary/30 transition-colors">
-                <CardContent className="p-5 flex items-start justify-between gap-4">
-                  <div className="min-w-0">
-                    <h3 className="text-lg font-semibold font-sans">From Chatbot to Workflow: AI in Preclinical Medical Education</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Harrison Konsker, Medical Student — Stanford University</p>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      A presentation on how to use AI to enhance preclinical education. Medical students can also explore a{" "}
-                      <a
-                        href="https://harrisonkonsker.github.io/#toolkit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline inline-flex items-center gap-1.5"
-                      >
-                        guide with all the resources they can use to enhance their learning
-                        <ExternalLink className="h-3.5 w-3.5 shrink-0" />
-                      </a>
-                      .
-                    </p>
-                  </div>
+                <CardContent className="p-5">
                   <a
                     href="https://docs.google.com/presentation/d/1uaOcQlXT8j_cbQI2sPRvklEHLUx5VkFeFH59H7eLosY/edit?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="shrink-0 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline mt-0.5"
+                    className="text-lg font-semibold text-primary hover:underline inline-flex items-center gap-1.5"
                   >
-                    View slides <ExternalLink className="h-3.5 w-3.5" />
+                    From Chatbot to Workflow: AI in Preclinical Medical Education
+                    <ExternalLink className="h-4 w-4 shrink-0" />
                   </a>
+                  <p className="text-sm text-muted-foreground mt-1">Harrison Konsker, Medical Student — Stanford University</p>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    A presentation on how to use AI to enhance preclinical education. Medical students can also explore a{" "}
+                    <a
+                      href="https://harrisonkonsker.github.io/#toolkit"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline inline-flex items-center gap-1.5"
+                    >
+                      guide with all the resources they can use to enhance their learning
+                      <ExternalLink className="h-3.5 w-3.5 shrink-0" />
+                    </a>
+                    .
+                  </p>
                 </CardContent>
               </Card>
             )}
